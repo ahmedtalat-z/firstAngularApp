@@ -1,0 +1,25 @@
+<h1>Home</h1>
+<p>welcome  {{userName}}</p>
+<img [src]="scrImg" alt="">
+<button (click)="welcome()">click</button>
+@for (item of names; track item ;) {
+  <p>{{$index}},{{item}}</p>
+}@empty {
+  <p>no users to show</p>
+}
+<ng-template #temp>fola</ng-template>
+
+@if (number<5) {
+  <h2>is smaller</h2>
+}@else {
+
+  <h2 [style.color]='colorgreater'> is greater</h2>
+  temp
+
+}
+
+<h2 [class.red]="number>5"> is greater</h2>
+
+
+
+

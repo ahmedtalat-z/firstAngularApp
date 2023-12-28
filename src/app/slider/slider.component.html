@@ -1,0 +1,11 @@
+<button (click)="mesgFromChild()" class="btn btn-danger text-white d-block">click</button>
+<owl-carousel-o [options]="customOptions">
+
+  <ng-container *ngFor="let film of topTrending">
+    <ng-template carouselSlide >
+      <img [src]="pathPrefix+film.poster_path" >
+      <h5>{{film.title}}</h5>
+    </ng-template>
+  </ng-container>
+
+</owl-carousel-o>

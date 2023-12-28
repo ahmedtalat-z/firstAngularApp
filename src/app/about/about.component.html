@@ -1,0 +1,16 @@
+<div class="row">
+  <h2>this is message from slider {{msg}}</h2>
+  <app-slider [topTrending]="Films.slice(0,5)" (theOut)="msg=$event" ></app-slider>
+  
+  @for (film of Films; track $index) {
+    <div class="col-md-3">
+      <div>
+        <img [src]="pathPrefix + film.poster_path" class="w-100">
+        <h2> {{film.title}}</h2>
+        <p> {{film.overview}} </p>
+        <p [ngClass]="{'text-danger' : film.vote_average < 8.5}"  >{{film.vote_average}}</p>
+      </div>
+    </div>
+  }
+
+</div>
